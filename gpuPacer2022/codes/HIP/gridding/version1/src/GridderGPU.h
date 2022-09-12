@@ -1,7 +1,7 @@
 #pragma once
 
 #include "hip/hip_runtime.h"
-#include "device_launch_parameters.h"
+//#include "device_launch_parameters.h"
 
 #include <complex>
 #include <iostream>

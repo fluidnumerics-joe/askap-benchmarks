@@ -85,7 +85,7 @@ void GridderGPU<T2>::gridder()
     {
         step = gridStep(DSIZE, SSIZE, dind, iu, iv);
         dim3 gridDim(SSIZE, step);
-        devGridKernel << <gridDim, SSIZE >> > ((const Complex*)dData, support, (const Complex*)dC, dCOffset, dIU, dIV, (Complex*)dGrid, GSIZE, dind);
+        devGridKernel<<<gridDim, SSIZE>>>((const Complex*)dData, support, (const Complex*)dC, dCOffset, dIU, dIV, (Complex*)dGrid, GSIZE, dind);
         gpuCheckErrors("kernel launch (devGridKernel_v0) failure");
         count++;
     }

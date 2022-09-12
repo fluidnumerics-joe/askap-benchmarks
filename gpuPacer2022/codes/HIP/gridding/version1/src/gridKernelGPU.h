@@ -2,7 +2,7 @@
 #pragma once
 
 #include "hip/hip_runtime.h"
-#include "device_launch_parameters.h"
+//#include "device_launch_parameters.h"
 #include "hip/hip_complex.h"
 
 typedef hipComplex Complex;
